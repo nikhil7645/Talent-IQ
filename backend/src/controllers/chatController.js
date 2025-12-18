@@ -6,7 +6,7 @@ export async function getStreamToken(req, res) {
         const token = chatClient.createToken(req.user.clerkID);
         res.status(200).json({
             token,
-            userId : req.user.userId,
+            userId : req.user.clerkID,
             userName: req.user.name,
             userImage: req.user.image
         })
